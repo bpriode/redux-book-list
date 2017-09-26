@@ -2,6 +2,8 @@
 export function selectBook(book) {
 
   return {
+    type:'BOOK_SELECTED',
+    payload: book
     //You should create a Type and Payload for your Action here
   };
 }

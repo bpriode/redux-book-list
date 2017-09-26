@@ -10,22 +10,20 @@ class BookList extends Component {
   render() {
 
     //must create a map function here to return the following:
-
-
-    // ******************
-    //
-    //     <li
-    //       key={book.id}
-    //       onClick={() => this.props.selectBook(book)}
-    //       className="list-group-item">{book.title}</li>
-    //
-    // ******************
-
+      let bookData = this.props.books.map((book) => {
     return (
       <ul className="list-group col-sm-4">
-        {/* return your mapped array list items here */}
+        <li key={book.id}
+            onClick={() => this.props.selectBook(book)}
+           className="list-group-item">{book.title}</li>
       </ul>
     );
+  })
+  return (
+    <div>
+    {bookData}
+    </div>
+    )
   }
 }
 
