@@ -9,8 +9,10 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <h1>Books N' Roses: Appetite for Instruction</h1>
+                <div className='row'>
                 <BookList/>
                 <BookDetail/>
+                </div>
             </div>
         );
     }
